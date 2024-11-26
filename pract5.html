@@ -1,0 +1,73 @@
+<!-- Practical 5: Design a page web using JavaScript to demonstrate, For loop, While loop, 
+Do While loop, Break a loop, Break and continue a loop  -->
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Loop Demonstration</title> 
+<style> body { font-family: Arial, 
+sans-serif; margin: 20px; 
+} 
+pre { background-color: 
+#f4f4f4; padding: 10px; border: 
+1px solid #ccc; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>Loop Demonstration</h1> 
+<h2>For Loop</h2> 
+<button onclick="demonstrateForLoop()">Run For Loop</button> 
+<pre id="forLoopOutput"></pre> 
+<h2>While Loop</h2> 
+<button onclick="demonstrateWhileLoop()">Run While Loop</button> 
+<pre id="whileLoopOutput"></pre> 
+<h2>Do While Loop</h2> 
+<button onclick="demonstrateDoWhileLoop()">Run Do While Loop</button> 
+<pre id="doWhileLoopOutput"></pre> 
+<h2>Break and Continue in Loop</h2> 
+<button onclick="demonstrateBreakContinue()">Run Break and Continue</button> 
+<pre id="breakContinueOutput"></pre> 
+<script> function 
+demonstrateForLoop() { let 
+output = ''; for (let i = 1; i <= 5; i++) { 
+output += `For Loop: 
+${i}\n`; 
+} 
+document.getElementById('forLoopOutput').innerText = output; 
+} 
+function demonstrateWhileLoop() 
+{ let output = ''; let i = 1; while (i 
+<= 5) { output += `While Loop: 
+${i}\n`; i++; 
+} 
+document.getElementById('whileLoopOutput').innerText = output; 
+} 
+function demonstrateDoWhileLoop() { let 
+output = ''; let i = 1; do { output += `Do 
+While 
+Loop: ${i}\n`; 
+i++; } while (i 
+<= 5); document.getElementById('doWhileLoopOutput').innerText = 
+output; 
+} 
+function demonstrateBreakContinue() 
+{ let output = ''; for (let i = 1; i <= 10; 
+i++) { if (i === 5) { output += `Break at: 
+${i}\n`; break; // Break the loop when i 
+is 5 
+} 
+output += `Continue in Loop: ${i}\n`; if 
+(i === 3) { output += `Continue 
+at: ${i}\n`; 
+continue; // Skip the rest of the loop when i is 3 
+} 
+} 
+document.getElementById('breakContinueOutput').innerText = output; 
+} 
+</script> 
+</body> 
+</html> 
