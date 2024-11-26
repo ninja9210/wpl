@@ -1,0 +1,57 @@
+<!-- Practical 6: Design a web page using JavaScript to demonstrate, Sort an array 
+(alphabetically and ascending), Sort numbers (numerically and ascending), Sort 
+numbers (numerically and descending).  -->
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>JavaScript Sorting</title> 
+<style> body { font-family: Arial, sans-serif; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>JavaScript Sorting</h1> 
+<button onclick="sortAlphabetically()">Sort Alphabetically</button> 
+<button onclick="sortAscending()">Sort Numbers Ascending</button> 
+<button onclick="sortDescending()">Sort Numbers Descending</button> 
+<div id="result"></div> 
+<script> 
+// Initial arrays let alphabet = ["orange", "apple", "banana", "cherry", 
+"date"]; let numbers = [64, 25, 12, 89, 5]; 
+// Display initial arrays 
+document.getElementById("result").innerHTML = ` 
+<h2>Initial Arrays:</h2> 
+<p>Alphabet: ${alphabet}</p> 
+<p>Numbers: ${numbers}</p> 
+`; 
+// Sort alphabetically function 
+sortAlphabetically() { 
+alphabet.sort(); 
+document.getElementById("result").innerHTML += ` 
+<h2>Sorted Alphabetically:</h2> 
+<p>${alphabet}</p> 
+`; 
+} 
+// Sort numbers ascending 
+function sortAscending() { 
+numbers.sort((a, b) => a - b); 
+document.getElementById("result")
+.innerHTML += ` 
+<h2>Sorted Numbers Ascending:</h2> 
+<p>${numbers}</p> 
+`; 
+} 
+// Sort numbers descending function sortDescending() 
+{ numbers.sort((a, b) => b - a); 
+document.getElementById("result").innerHTML += ` 
+<h2>Sorted Numbers Descending:</h2> 
+<p>${numbers}</p> 
+`; 
+} 
+</script> 
+</body> 
+</html>
