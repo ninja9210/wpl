@@ -1,0 +1,71 @@
+<!-- Practical 3:- Design a web page using JavaScript to demonstrate, Alert box, Alert box with line 
+breaks, Confirm box and Prompt box.  -->
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>JavaScript Dialog Boxes</title> 
+<style> body { font-family: Arial, sans-serif; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>JavaScript Dialog Boxes</h1> 
+ 
+ 
+<button onclick="alertBox()">Alert Box</button> 
+<button onclick="alertBoxLineBreaks()">Alert Box with Line Breaks</button> 
+<button onclick="confirmBox()">Confirm Box</button> 
+<button onclick="promptBox()">Prompt Box</button> 
+ 
+ 
+<div id="result"></div> 
+ 
+ 
+<script> // Alert Box function 
+alertBox() { alert("This is an 
+alert box!"); 
+} 
+ 
+// Alert Box with Line Breaks function 
+alertBoxLineBreaks() { alert("This is an alert box!\nWith line 
+breaks."); 
+} 
+ 
+ 
+// Confirm Box function confirmBox() { let 
+result = confirm("Are you sure?"); 
+if (result) { 
+document.getElementById("result").innerHTML = ` 
+<h2>Confirm Box Result:</h2> 
+<p>You clicked OK.</p> 
+`; 
+} else { 
+document.getElementById("result").innerHTML = ` 
+<h2>Confirm Box Result:</h2> 
+<p>You clicked Cancel.</p> 
+`; 
+} 
+} 
+ 
+ 
+// Prompt Box function promptBox() { let name = prompt("Please 
+enter your name:"); 
+if (name != null) { 
+document.getElementById("result").innerHTML = ` 
+<h2>Prompt Box Result:</h2> 
+<p>Hello, ${name}!</p> 
+`; 
+} else { 
+document.getElementById("result").innerHTML = ` 
+<h2>Prompt Box Result:</h2> 
+<p>You clicked Cancel.</p> 
+`; 
+} 
+} 
+</script> 
+</body> 
+</html>
