@@ -1,0 +1,79 @@
+<!-- Practical 2:- Design a web page using JavaScript to demonstrate, if statement, if…else statement 
+and switch statement.  -->
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>JavaScript Conditional Statements</title> 
+<style> body { font-family: Arial, sans-serif; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>JavaScript Conditional Statements</h1> 
+ 
+ 
+<button onclick="ifStatement()">If Statement</button> 
+<button onclick="ifElseStatement()">If-Else Statement</button> 
+<button onclick="switchStatement()">Switch Statement</button> 
+ 
+ 
+<div id="result"></div> 
+ 
+ 
+<script> 
+// If Statement function 
+ifStatement() { let age = 
+25; if (age >= 18) { 
+document.getElement 
+ById("result").innerHT
+ML = ` 
+<h2>If Statement Result:</h2> 
+<p>You are an adult.</p> 
+`; 
+} 
+} 
+ 
+ 
+// If-Else Statement function ifElseStatement() { let age 
+= 15; if (age >= 18) { 
+document.getElementById("result").innerHTML = ` 
+<h2>If-Else Statement Result:</h2> 
+<p>You are an adult.</p> 
+`; 
+} else { 
+document.getElementById("result").innerHTML = ` 
+<h2>If-Else Statement Result:</h2> 
+<p>You are a minor.</p> 
+`; 
+} 
+} 
+ 
+ 
+// Switch Statement 
+function switchStatement() { 
+let day = "Saturday"; switch 
+(day) { 
+case "Monday": 
+document.getElementById("result").innerHTML = ` 
+<h2>Switch Statement Result:</h2> 
+<p>Today is Monday.</p> 
+`; 
+break; case 
+"Saturday": 
+document.getElementById("result").innerHTML = ` 
+<h2>Switch Statement Result:</h2> 
+<p>Today is Saturday.</p> 
+`; 
+break; default: 
+document.getElementById("result").innerHTML = ` 
+<h2>Switch Statement Result:</h2> 
+<p>Today is another day.</p> 
+} 
+} 
+</script> 
+</body> 
+</html> 
+
