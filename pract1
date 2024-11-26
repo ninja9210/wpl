@@ -1,0 +1,133 @@
+(* Practical 1: Develop a complete web page using HTML basic tags, CSS, Table 
+and Layout *)
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Sample Webpage Layout</title> 
+<style> 
+/* Basic CSS Reset */ 
+* { 
+margin: 0; padding: 0; 
+box-sizing: borderbox; 
+} 
+body { font-family: Arial, sans-serif; lineheight: 
+1.6; 
+} 
+/* Layout Styles */ header 
+{ 
+background-color: #4CAF50; 
+color: white; padding: 
+10px; text-align: 
+center; 
+} 
+nav { 
+background-color: #333; 
+padding: 10px; 
+} 
+nav ul { 
+list-style: none; 
+} 
+nav ul li { 
+display: inline; 
+marginright: 15px; 
+} 
+nav ul li a { 
+color: white; textdecoration: none; } 
+.container 
+{ 
+display: 
+flex; 
+flex-wrap: 
+wrap; 
+padding: 20px; 
+} 
+.main { flex: 
+3; 
+padding: 20px; 
+} 
+.sidebar { flex: 
+1; 
+padding: 20px; backgroundcolor: #f4f4f4; 
+} 
+footer { 
+background-color: 
+#333; color: white; 
+textalign: center; 
+padding: 10px; position: 
+relative; bottom: 0; 
+width: 100%; 
+} 
+/* Table Styles */ table 
+{ 
+width: 100%; border-collapse: 
+collapse; margin-bottom: 
+20px; 
+} 
+table, th, td { 
+border: 1px solid #ddd; 
+} th, td { padding: 12px; 
+text-align: left; 
+} 
+th { 
+background-color: #4CAF50; 
+color: white; 
+} 
+td { 
+background-color: #f9f9f9; 
+} 
+</style> 
+</head> 
+<body> 
+<!-- Header Section --> 
+<header> 
+<h1>Welcome to My Website</h1> 
+<p>Your one-stop source for information</p> 
+</header> 
+<!-- Navigation Bar --> 
+<nav> 
+<ul> 
+<li><a href="#home">Home</a></li> 
+<li><a href="#about">About</a></li> 
+<li><a href="#services">Services</a></li> 
+<li><a href="#contact">Contact</a></li> 
+</ul> 
+</nav> 
+<!-- Main Container Section --> 
+<div class="container"> <!-
+- Main Content --> 
+<div class="main"> 
+<h2>North Maharashtra University</h2> 
+<h3>Branches</h3> 
+<table> 
+<tr> 
+<th>Sr.No</th> 
+<th>Branches</th> 
+<th>Vacancy</th> 
+</tr> 
+<tr> 
+<td>1</td> 
+<td>Computer Engineering</td> 
+<td>300</td> 
+</tr> 
+<tr> 
+<td>2</td> 
+<td>Information Technology</td> 
+<td>200</td> 
+</tr> 
+<tr> 
+<td>3</td> 
+<td>Mechanical Engineering</td> 
+<td>200</td> 
+</tr> 
+</table> 
+<h3>Additional Information</h3> 
+<p>Here you can place additional information or sections as needed.</p> </div> 
+<!-- Footer Section --> 
+<footer> 
+<p>&copy;Developed By Name.</p> 
+</footer> 
+</body> 
+</html>
