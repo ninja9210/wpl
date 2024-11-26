@@ -1,83 +1,87 @@
-<!--  Practical 4:- Design a web page using JavaScript to demonstrate, call a function, function with an 
-argument, function return value.   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions Demonstration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Function Demonstration</h1>
+  <p>Click the buttons below to test JavaScript function calls:</p>
 
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>JavaScript Functions Demonstration</title> 
-<style> body { font-family: Arial, 
-sans-serif; 
-margin: 20px; background-color: 
-#f5f5f5; 
-} 
-h1 { color: 
-#4CAF50; 
-} 
-button { margin: 10px; padding: 10px 
-20px; 
-background-color: 
-#4CAF50; color: 
-white; border: 
-none; 
-cursor: pointer; 
-} 
-button:hover { backgroundcolor: #45a049; 
-} 
-#result { 
-margin-top: 20px; padding: 10px; 
-background-color: 
-#e0e0e0; border-radius: 
-5px; 
-} 
-</style> 
-</head> 
-<body> 
-<h1>JavaScript Function Demonstration</h1> 
-<p>Click the buttons below to test JavaScript function calls:</p> 
-<!-- Buttons to trigger JavaScript functions --> 
-<button onclick="callSimpleFunction()">Call Simple Function</button> 
-<button onclick="callFunctionWithArgument()">Call Function with Argument</button> 
-<button onclick="callFunctionReturnValue()">Call Function that Returns a Value</button> 
-<!-- Result display area --> 
-<div id="result"> 
-<p>Results will be displayed here.</p> 
-</div> 
-<script> 
-// Function without arguments or return value function 
-callSimpleFunction() { 
-document.getElementById("result").innerHTML = "<p>You called a simple function without 
-arguments!</p>"; 
-} 
-// Function with one argument function 
-greetUser(name) { 
-document.getElementById("result").innerHTML = `<p>Hello, ${name}! This is a function with 
-an argument.</p>`; 
-} 
-// Function returning a value function 
-calculateSquare(number) { return 
-number * number; 
-} 
-// Function to handle calling function with an argument function 
-callFunctionWithArgument() { let userName = prompt("Please enter 
-your name:"); if (userName !== null && userName.trim() !== "") { 
-greetUser(userName); // Calling the function with an argument 
-} else { 
-document.getElementById("result").innerHTML = "<p>No name was entered!</p>"; 
-} 
-} 
-// Function to handle calling a function that returns a value function 
-callFunctionReturnValue() { let number = prompt("Enter a number to calculate its square:"); if 
-(!isNaN(number) && number !== null && number.trim() !== "") { let result = 
-calculateSquare(Number(number)); // Calling function that returns a value 
-document.getElementById("result").innerHTML = `<p>The square of ${number} is 
-${result}.</p>`; 
-} else { 
-document.getElementById("result").innerHTML = "<p>Invalid input! Please enter a valid 
-number.</p>"; 
-} 
-} 
-</script> 
-</body> 
+  <!-- Buttons to trigger JavaScript functions -->
+  <button onclick="callSimpleFunction()">Call Simple Function</button>
+  <button onclick="callFunctionWithArgument()">Call Function with Argument</button>
+  <button onclick="callFunctionReturnValue()">Call Function that Returns a Value</button>
+
+  <!-- Result display area -->
+  <div id="result">
+    <p>Results will be displayed here.</p>
+  </div>
+
+  <script>
+    // Function without arguments or return value
+    function callSimpleFunction() {
+      document.getElementById("result").innerHTML = "<p>You called a simple function without arguments!</p>";
+    }
+
+    // Function with one argument
+    function greetUser(name) {
+      document.getElementById("result").innerHTML = `<p>Hello, ${name}! This is a function with an argument.</p>`;
+    }
+
+    // Function returning a value
+    function calculateSquare(number) {
+      return number * number;
+    }
+
+    // Function to handle calling a function with an argument
+    function callFunctionWithArgument() {
+      let userName = prompt("Please enter your name:");
+      if (userName !== null && userName.trim() !== "") {
+        greetUser(userName); // Calling the function with an argument
+      } else {
+        document.getElementById("result").innerHTML = "<p>No name was entered!</p>";
+      }
+    }
+
+    // Function to handle calling a function that returns a value
+    function callFunctionReturnValue() {
+      let number = prompt("Enter a number to calculate its square:");
+      if (!isNaN(number) && number !== null && number.trim() !== "") {
+        let result = calculateSquare(Number(number)); // Calling the function that returns a value
+        document.getElementById("result").innerHTML = `<p>The square of ${number} is ${result}.</p>`;
+      } else {
+        document.getElementById("result").innerHTML = "<p>Invalid input! Please enter a valid number.</p>";
+      }
+    }
+  </script>
+</body>
 </html>
